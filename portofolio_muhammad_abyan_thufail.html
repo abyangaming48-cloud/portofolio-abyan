@@ -1,0 +1,574 @@
+<!DOCTYPE html>
+<html lang="id" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portofolio - Muhammad abyan Thufail</title>
+    
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    
+    <!-- Google Fonts (Inter) -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    
+    <!-- FontAwesome for Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <!-- AOS Animation Library -->
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+
+    <!-- Tailwind Configuration & Custom Styles -->
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    fontFamily: {
+                        sans: ['Inter', 'sans-serif'],
+                    },
+                    colors: {
+                        accent: '#6366f1', // Indigo 500
+                        accentHover: '#4f46e5', // Indigo 600
+                        darkBg: '#0f172a', // Slate 900
+                        darkCard: '#1e293b', // Slate 800
+                    }
+                }
+            }
+        }
+    </script>
+    <style>
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: #020617; /* Very dark background */
+            color: #f8fafc;
+        }
+        
+        /* Custom Scrollbar */
+        ::-webkit-scrollbar {
+            width: 8px;
+        }
+        ::-webkit-scrollbar-track {
+            background: #0f172a; 
+        }
+        ::-webkit-scrollbar-thumb {
+            background: #475569; 
+            border-radius: 4px;
+        }
+        ::-webkit-scrollbar-thumb:hover {
+            background: #6366f1; 
+        }
+
+        /* Timeline specific styles */
+        .timeline-dot {
+            left: -5px;
+        }
+        @media (min-width: 768px) {
+            .timeline-dot {
+                left: -41px;
+            }
+        }
+    </style>
+</head>
+<body class="antialiased overflow-x-hidden selection:bg-accent selection:text-white">
+
+    <!-- Navigation -->
+    <nav class="fixed w-full z-50 transition-all duration-300 backdrop-blur-md bg-darkBg/80 border-b border-white/10" id="navbar">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex items-center justify-between h-20">
+                <!-- Logo -->
+                <div class="flex-shrink-0">
+                    <a href="#home" class="text-2xl font-bold tracking-tighter text-white">
+                        Abyan<span class="text-accent">.</span>
+                    </a>
+                </div>
+                
+                <!-- Desktop Menu -->
+                <div class="hidden lg:block">
+                    <div class="ml-10 flex items-baseline space-x-6 text-sm font-medium">
+                        <a href="#home" class="hover:text-accent transition-colors">Home</a>
+                        <a href="#about" class="hover:text-accent transition-colors">About</a>
+                        <a href="#education" class="hover:text-accent transition-colors">Education</a>
+                        <a href="#skills" class="hover:text-accent transition-colors">Skills</a>
+                        <a href="#experience" class="hover:text-accent transition-colors">Experience</a>
+                        <a href="#gallery" class="hover:text-accent transition-colors">Gallery</a>
+                        <a href="#contact" class="hover:text-accent transition-colors text-accent border border-accent px-4 py-2 rounded-full hover:bg-accent hover:text-white transition-all">Contact</a>
+                    </div>
+                </div>
+                
+                <!-- Mobile menu button -->
+                <div class="lg:hidden flex items-center">
+                    <button id="mobile-menu-btn" class="text-gray-300 hover:text-white focus:outline-none">
+                        <i class="fas fa-bars text-2xl"></i>
+                    </button>
+                </div>
+            </div>
+        </div>
+
+        <!-- Mobile Menu -->
+        <div id="mobile-menu" class="hidden lg:hidden bg-darkCard border-b border-white/10">
+            <div class="px-2 pt-2 pb-3 space-y-1 sm:px-3 text-center">
+                <a href="#home" class="block px-3 py-2 text-base font-medium hover:text-accent transition-colors mobile-link">Home</a>
+                <a href="#about" class="block px-3 py-2 text-base font-medium hover:text-accent transition-colors mobile-link">About</a>
+                <a href="#education" class="block px-3 py-2 text-base font-medium hover:text-accent transition-colors mobile-link">Education</a>
+                <a href="#skills" class="block px-3 py-2 text-base font-medium hover:text-accent transition-colors mobile-link">Skills</a>
+                <a href="#experience" class="block px-3 py-2 text-base font-medium hover:text-accent transition-colors mobile-link">Experience</a>
+                <a href="#gallery" class="block px-3 py-2 text-base font-medium hover:text-accent transition-colors mobile-link">Gallery</a>
+                <a href="#contact" class="block px-3 py-2 text-base font-medium text-accent mobile-link">Contact</a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section id="home" class="relative min-h-screen flex items-center pt-20 overflow-hidden">
+        <!-- Background decorative elements -->
+        <div class="absolute top-1/4 left-10 w-72 h-72 bg-accent/20 rounded-full mix-blend-screen filter blur-3xl opacity-50 animate-blob"></div>
+        <div class="absolute top-1/3 right-10 w-72 h-72 bg-blue-600/20 rounded-full mix-blend-screen filter blur-3xl opacity-50 animate-blob animation-delay-2000"></div>
+
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10 w-full">
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
+                <!-- Text Content -->
+                <div data-aos="fade-right" data-aos-duration="1000">
+                    <p class="text-accent font-semibold tracking-wide mb-2">Halo, Selamat Datang!</p>
+                    <h1 class="text-5xl md:text-6xl lg:text-7xl font-bold leading-tight mb-4">
+                        Saya <span class="text-transparent bg-clip-text bg-gradient-to-r from-accent to-blue-400">Muhammad abyan Thufail</span>
+                    </h1>
+                    <p class="text-xl text-gray-400 mb-8 max-w-lg">
+                        Siswa SMAN 2 Mojokerto | Jurusan MIPA | Penggemar Teknologi & Olahraga. 
+                        Mengeksplorasi dunia pemrograman dan kreativitas digital.
+                    </p>
+                    <div class="flex flex-wrap gap-4">
+                        <a href="#about" class="bg-accent hover:bg-accentHover text-white px-8 py-3 rounded-full font-medium transition-all shadow-[0_0_20px_rgba(99,102,241,0.4)] hover:shadow-[0_0_30px_rgba(99,102,241,0.6)]">
+                            Tentang Saya
+                        </a>
+                        <a href="#gallery" class="border border-white/20 hover:border-white/60 bg-white/5 backdrop-blur-sm text-white px-8 py-3 rounded-full font-medium transition-all">
+                            Lihat Galeri
+                        </a>
+                    </div>
+                </div>
+                
+                <!-- Profile Image -->
+                <div class="relative flex justify-center md:justify-end" data-aos="fade-left" data-aos-duration="1000" data-aos-delay="200">
+                    <div class="relative w-72 h-72 md:w-96 md:h-96">
+                        <!-- Ganti URL src di bawah dengan link foto Anda -->
+                        <img src="WhatsApp Image 2026-08-04 at 09.27.15.jpeg" alt="Muhammad abyan Thufail" class="rounded-full object-cover w-full h-full border-4 border-darkCard shadow-2xl relative z-10">
+                        <!-- Decorative ring -->
+                        <div class="absolute inset-0 rounded-full border-2 border-accent/30 scale-105 animate-pulse"></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about" class="py-24 bg-darkBg">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-16" data-aos="fade-up">
+                <h2 class="text-3xl md:text-4xl font-bold mb-4">Tentang <span class="text-accent">Saya</span></h2>
+                <div class="w-20 h-1 bg-accent mx-auto rounded-full"></div>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-12 gap-12 items-center">
+                <!-- About Info Cards -->
+                <div class="md:col-span-5 grid grid-cols-1 sm:grid-cols-2 gap-4" data-aos="fade-up">
+                    <div class="bg-darkCard p-6 rounded-2xl border border-white/5 hover:border-accent/30 transition-all group">
+                        <i class="fas fa-user text-2xl text-accent mb-3 group-hover:scale-110 transition-transform"></i>
+                        <h3 class="text-gray-400 text-sm">Nama Panggilan</h3>
+                        <p class="text-lg font-semibold">Abyan</p>
+                    </div>
+                    <div class="bg-darkCard p-6 rounded-2xl border border-white/5 hover:border-accent/30 transition-all group">
+                        <i class="fas fa-calendar-alt text-2xl text-accent mb-3 group-hover:scale-110 transition-transform"></i>
+                        <h3 class="text-gray-400 text-sm">Tempat, Tgl Lahir</h3>
+                        <p class="text-lg font-semibold">Mojokerto, 08 April 2008</p>
+                    </div>
+                    <div class="bg-darkCard p-6 rounded-2xl border border-white/5 hover:border-accent/30 transition-all group">
+                        <i class="fas fa-map-marker-alt text-2xl text-accent mb-3 group-hover:scale-110 transition-transform"></i>
+                        <h3 class="text-gray-400 text-sm">Domisili</h3>
+                        <p class="text-lg font-semibold">Kab. Mojokerto</p>
+                    </div>
+                    <div class="bg-darkCard p-6 rounded-2xl border border-white/5 hover:border-accent/30 transition-all group">
+                        <i class="fas fa-school text-2xl text-accent mb-3 group-hover:scale-110 transition-transform"></i>
+                        <h3 class="text-gray-400 text-sm">Pendidikan</h3>
+                        <p class="text-lg font-semibold">SMAN 2 Mojokerto (XII MIPA 6)</p>
+                    </div>
+                </div>
+
+                <!-- About Description -->
+                <div class="md:col-span-7" data-aos="fade-up" data-aos-delay="200">
+                    <h3 class="text-2xl font-bold mb-4">Mengenal Lebih Dekat</h3>
+                    <p class="text-gray-400 leading-relaxed mb-6">
+                        Perkenalkan nama saya <span class="text-white font-medium">Muhammad abyan Thufail</span>, saya berasal dari Mojokerto, dan Bersekolah di <span class="text-white font-medium">SMA NEGERI 2 MOJOKERTO</span>. Saya memiliki hobi berolahraga.
+                    </p>
+                    <a href="#contact" class="inline-flex items-center text-accent hover:text-white transition-colors font-medium">
+                        Hubungi saya <i class="fas fa-arrow-right ml-2"></i>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Education Section -->
+    <section id="education" class="py-24">
+        <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-16" data-aos="fade-up">
+                <h2 class="text-3xl md:text-4xl font-bold mb-4">Riwayat <span class="text-accent">Pendidikan</span></h2>
+                <div class="w-20 h-1 bg-accent mx-auto rounded-full"></div>
+            </div>
+
+            <div class="relative border-l-2 border-accent/30 md:ml-10">
+                <!-- Timeline Item 3 -->
+                <div class="mb-12 ml-6 md:ml-10 relative" data-aos="fade-up">
+                    <div class="absolute w-4 h-4 bg-accent rounded-full mt-1.5 timeline-dot shadow-[0_0_10px_rgba(99,102,241,0.8)] border-2 border-[#020617]"></div>
+                    <div class="bg-darkCard p-6 rounded-2xl border border-white/5 hover:border-accent/30 transition-all hover:-translate-y-1">
+                        <span class="text-accent text-sm font-bold tracking-wider mb-1 block">2024 - 2027</span>
+                        <h3 class="text-xl font-bold text-white mb-1">SMA Negeri 2 Mojokerto</h3>
+                        <p class="text-gray-400">Kelas XII 6, Jurusan MIPA</p>
+                    </div>
+                </div>
+
+                <!-- Timeline Item 2 -->
+                <div class="mb-12 ml-6 md:ml-10 relative" data-aos="fade-up" data-aos-delay="100">
+                    <div class="absolute w-4 h-4 bg-gray-600 rounded-full mt-1.5 timeline-dot border-2 border-[#020617]"></div>
+                    <div class="bg-darkCard/50 p-6 rounded-2xl border border-white/5">
+                        <span class="text-gray-400 text-sm font-bold tracking-wider mb-1 block">2021 - 2024</span>
+                        <h3 class="text-xl font-bold text-white mb-1">SMPN 1 Dawarblandong</h3>
+                        <p class="text-gray-400">Pendidikan Menengah Pertama</p>
+                    </div>
+                </div>
+
+                <!-- Timeline Item 1 -->
+                <div class="ml-6 md:ml-10 relative" data-aos="fade-up" data-aos-delay="200">
+                    <div class="absolute w-4 h-4 bg-gray-600 rounded-full mt-1.5 timeline-dot border-2 border-[#020617]"></div>
+                    <div class="bg-darkCard/50 p-6 rounded-2xl border border-white/5">
+                        <span class="text-gray-400 text-sm font-bold tracking-wider mb-1 block">2015 - 2021</span>
+                        <h3 class="text-xl font-bold text-white mb-1">SDN 2 Pulorejo</h3>
+                        <p class="text-gray-400">Pendidikan Sekolah Dasar</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Skills Section -->
+    <section id="skills" class="py-24 bg-darkBg">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-16" data-aos="fade-up">
+                <h2 class="text-3xl md:text-4xl font-bold mb-4">Keahlian & <span class="text-accent">Kemampuan</span></h2>
+                <div class="w-20 h-1 bg-accent mx-auto rounded-full mb-4"></div>
+                <p class="text-gray-400">Keterampilan teknis dan non-teknis yang saya miliki.</p>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+                <!-- Hard Skills -->
+                <div data-aos="fade-right">
+                    <h3 class="text-xl font-semibold mb-6 flex items-center"><i class="fas fa-laptop-code mr-3 text-accent"></i> Technical Skills</h3>
+                    
+                    <div class="space-y-6">
+                        <!-- Skill 1 -->
+                        <div>
+                            <div class="flex justify-between mb-1">
+                                <span class="text-sm font-medium text-gray-200">Pemrograman Python</span>
+                                <span class="text-sm font-medium text-accent">70%</span>
+                            </div>
+                            <div class="w-full bg-gray-800 rounded-full h-2.5">
+                                <div class="bg-accent h-2.5 rounded-full" style="width: 70%"></div>
+                            </div>
+                        </div>
+                        
+                        <!-- Skill 2 -->
+                        <div>
+                            <div class="flex justify-between mb-1">
+                                <span class="text-sm font-medium text-gray-200">HTML & CSS</span>
+                                <span class="text-sm font-medium text-accent">75%</span>
+                            </div>
+                            <div class="w-full bg-gray-800 rounded-full h-2.5">
+                                <div class="bg-accent h-2.5 rounded-full" style="width: 75%"></div>
+                            </div>
+                        </div>
+
+                        <!-- Skill 3 -->
+                        <div>
+                            <div class="flex justify-between mb-1">
+                                <span class="text-sm font-medium text-gray-200">Desain Grafis</span>
+                                <span class="text-sm font-medium text-accent">80%</span>
+                            </div>
+                            <div class="w-full bg-gray-800 rounded-full h-2.5">
+                                <div class="bg-accent h-2.5 rounded-full" style="width: 80%"></div>
+                            </div>
+                        </div>
+
+                        <!-- Skill 4 -->
+                        <div>
+                            <div class="flex justify-between mb-1">
+                                <span class="text-sm font-medium text-gray-200">Editing Foto/Video</span>
+                                <span class="text-sm font-medium text-accent">85%</span>
+                            </div>
+                            <div class="w-full bg-gray-800 rounded-full h-2.5">
+                                <div class="bg-accent h-2.5 rounded-full" style="width: 85%"></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Soft Skills -->
+                <div data-aos="fade-left" data-aos-delay="200">
+                    <h3 class="text-xl font-semibold mb-6 flex items-center"><i class="fas fa-users mr-3 text-accent"></i> Soft Skills</h3>
+                    
+                    <div class="space-y-6">
+                        <!-- Skill 5 -->
+                        <div>
+                            <div class="flex justify-between mb-1">
+                                <span class="text-sm font-medium text-gray-200">Public Speaking</span>
+                                <span class="text-sm font-medium text-accent">75%</span>
+                            </div>
+                            <div class="w-full bg-gray-800 rounded-full h-2.5">
+                                <div class="bg-blue-400 h-2.5 rounded-full" style="width: 75%"></div>
+                            </div>
+                        </div>
+                        
+                        <!-- Skill 6 -->
+                        <div>
+                            <div class="flex justify-between mb-1">
+                                <span class="text-sm font-medium text-gray-200">Kerja Sama Tim</span>
+                                <span class="text-sm font-medium text-accent">90%</span>
+                            </div>
+                            <div class="w-full bg-gray-800 rounded-full h-2.5">
+                                <div class="bg-blue-400 h-2.5 rounded-full" style="width: 90%"></div>
+                            </div>
+                        </div>
+
+                        <!-- Skill 7 -->
+                        <div>
+                            <div class="flex justify-between mb-1">
+                                <span class="text-sm font-medium text-gray-200">Problem Solving</span>
+                                <span class="text-sm font-medium text-accent">80%</span>
+                            </div>
+                            <div class="w-full bg-gray-800 rounded-full h-2.5">
+                                <div class="bg-blue-400 h-2.5 rounded-full" style="width: 80%"></div>
+                            </div>
+                        </div>
+                        
+                        <!-- Hobbies inline tags -->
+                        <div class="pt-4">
+                            <span class="text-sm font-medium text-gray-400 block mb-2">Hobi & Minat:</span>
+                            <div class="flex flex-wrap gap-2">
+                                <span class="px-3 py-1 bg-darkCard border border-white/10 rounded-full text-xs flex items-center"><i class="fas fa-film mr-2 text-accent"></i> Editing</span>
+                                <span class="px-3 py-1 bg-darkCard border border-white/10 rounded-full text-xs flex items-center"><i class="fas fa-running mr-2 text-accent"></i> Olahraga</span>
+                                <span class="px-3 py-1 bg-darkCard border border-white/10 rounded-full text-xs flex items-center"><i class="fas fa-gamepad mr-2 text-accent"></i> Main Game</span>
+                                <span class="px-3 py-1 bg-darkCard border border-white/10 rounded-full text-xs flex items-center"><i class="fas fa-motorcycle mr-2 text-accent"></i> Touring</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Experience & Achievements (Structure Placeholders) -->
+    <section id="experience" class="py-24">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-16" data-aos="fade-up">
+                <h2 class="text-3xl md:text-4xl font-bold mb-4">Pengalaman & <span class="text-accent">Penghargaan</span></h2>
+                <div class="w-20 h-1 bg-accent mx-auto rounded-full mb-4"></div>
+                <p class="text-gray-400">Bagian ini dapat Anda isi dengan pengalaman organisasi atau prestasi.</p>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+                <!-- Experience -->
+                <div data-aos="fade-up" data-aos-delay="100">
+                    <h3 class="text-2xl font-semibold mb-6 border-b border-white/10 pb-2">Pengalaman Organisasi</h3>
+                    <div class="space-y-4">
+                        <div class="bg-darkCard p-5 rounded-xl border border-white/5">
+                            <div class="flex justify-between items-start mb-2">
+                                <div>
+                                    <h4 class="font-bold text-lg">Dewan Penggalang</h4>
+                                    <p class="text-accent text-sm">Gerakan Pramuka</p>
+                                </div>
+                                <span class="text-xs text-gray-400 bg-gray-800 px-2 py-1 rounded">2021 - 2024</span>
+                            </div>
+                            <p class="text-sm text-gray-400 mt-2">Aktif dalam kegiatan kepramukaan tingkat SMP, membantu membina anggota, serta merencanakan dan melaksanakan berbagai program kegiatan Pramuka di tingkat penggalang.</p>
+                        </div>
+                        <!-- Add more experience cards here -->
+                    </div>
+                </div>
+
+                <!-- Achievements -->
+                <div id="achievements" data-aos="fade-up" data-aos-delay="200">
+                    <h3 class="text-2xl font-semibold mb-6 border-b border-white/10 pb-2">Penghargaan & Prestasi</h3>
+                    <div class="space-y-4">
+                        <div class="bg-darkCard p-5 rounded-xl border border-white/5">
+                            <div class="flex items-center gap-4">
+                                <div class="w-12 h-12 rounded-full bg-accent/20 flex items-center justify-center flex-shrink-0 text-accent">
+                                    <i class="fas fa-trophy text-xl"></i>
+                                </div>
+                                <div>
+                                    <h4 class="font-bold">Juara 1 Lomba (Contoh)</h4>
+                                    <p class="text-sm text-gray-400">Tingkat Kabupaten/Provinsi • 2024</p>
+                                </div>
+                            </div>
+                        </div>
+                         <div class="bg-darkCard p-5 rounded-xl border border-white/5">
+                            <div class="flex items-center gap-4">
+                                <div class="w-12 h-12 rounded-full bg-gray-800 flex items-center justify-center flex-shrink-0 text-gray-400">
+                                    <i class="fas fa-medal text-xl"></i>
+                                </div>
+                                <div>
+                                    <h4 class="font-bold">Peserta Terbaik (Contoh)</h4>
+                                    <p class="text-sm text-gray-400">Event / Seminar XYZ • 2023</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Gallery Section -->
+    <section id="gallery" class="py-24">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-16" data-aos="fade-up">
+                <h2 class="text-3xl md:text-4xl font-bold mb-4">Galeri <span class="text-accent">Aktivitas</span></h2>
+                <div class="w-20 h-1 bg-accent mx-auto rounded-full mb-4"></div>
+                <p class="text-gray-400">Dokumentasi kegiatan, atau aktivitas saya.</p>
+            </div>
+
+            <!-- Grid Galeri (Masonry / Standard Grid) -->
+            <div class="grid grid-cols-2 md:grid-cols-3 gap-4">
+                <div class="overflow-hidden rounded-xl group" data-aos="zoom-in" data-aos-delay="100">
+                    <img src="WhatsApp Image 2026-08-04 at 09.35.04.jpeg" alt="Gallery 1" class="w-full h-full object-cover group-hover:scale-110 group-hover:opacity-80 transition-all duration-500 cursor-pointer">
+                </div>
+                <div class="overflow-hidden rounded-xl group" data-aos="zoom-in" data-aos-delay="200">
+                    <img src="WhatsApp Image 2026-08-04 at 09.35.06 (1).jpeg" alt="Gallery 2" class="w-full h-full object-cover group-hover:scale-110 group-hover:opacity-80 transition-all duration-500 cursor-pointer">
+                </div>
+                <div class="overflow-hidden rounded-xl group" data-aos="zoom-in" data-aos-delay="300">
+                    <img src="WhatsApp Image 2026-08-04 at 09.35.06 (2).jpeg" alt="Gallery 3" class="w-full h-full object-cover group-hover:scale-110 group-hover:opacity-80 transition-all duration-500 cursor-pointer">
+                </div>
+                <div class="overflow-hidden rounded-xl group md:col-span-2 row-span-2" data-aos="zoom-in" data-aos-delay="400">
+                    <img src="WhatsApp Image 2026-08-04 at 09.35.06.jpeg" alt="Gallery 4" class="w-full h-full object-cover group-hover:scale-105 group-hover:opacity-80 transition-all duration-500 cursor-pointer">
+                </div>
+                <div class="overflow-hidden rounded-xl group" data-aos="zoom-in" data-aos-delay="500">
+                    <img src="WhatsApp Image 2026-08-04 at 09.35.07.jpeg" alt="Gallery 5" class="w-full h-full object-cover group-hover:scale-110 group-hover:opacity-80 transition-all duration-500 cursor-pointer">
+                </div>
+                <div class="overflow-hidden rounded-xl group" data-aos="zoom-in" data-aos-delay="600">
+                    <img src="WhatsApp Image 2026-08-04 at 09.46.36.jpeg" alt="Gallery 6" class="w-full h-full object-cover group-hover:scale-110 group-hover:opacity-80 transition-all duration-500 cursor-pointer">
+                </div>
+            </div>
+            <div class="text-center mt-10">
+                 <p class="text-sm text-gray-500">*Klik untuk memperbesar (fitur opsional dapat ditambahkan nanti)</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="py-24 bg-darkBg relative overflow-hidden">
+        <!-- Decoration -->
+        <div class="absolute bottom-0 right-0 w-64 h-64 bg-accent/10 rounded-full mix-blend-screen filter blur-3xl"></div>
+        
+        <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+            <div class="text-center mb-16" data-aos="fade-up">
+                <h2 class="text-3xl md:text-4xl font-bold mb-4">Hubungi <span class="text-accent">Saya</span></h2>
+                <div class="w-20 h-1 bg-accent mx-auto rounded-full mb-4"></div>
+                <p class="text-gray-400">Mari berdiskusi, bekerja sama, atau sekadar menyapa!</p>
+            </div>
+
+            <div class="bg-darkCard p-8 md:p-12 rounded-3xl border border-white/10 shadow-2xl" data-aos="zoom-in-up">
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+                    
+                    <div class="flex flex-col justify-center space-y-6">
+                        <h3 class="text-2xl font-bold mb-2">Informasi Kontak</h3>
+                        
+                        <!-- Location -->
+                        <div class="flex items-start">
+                            <div class="w-10 h-10 rounded-full bg-gray-800 flex items-center justify-center flex-shrink-0 text-gray-300 mr-4">
+                                <i class="fas fa-map-marker-alt"></i>
+                            </div>
+                            <div>
+                                <h4 class="text-sm font-medium text-gray-400">Lokasi</h4>
+                                <p class="text-white">Kab. Mojokerto, Jawa Timur</p>
+                            </div>
+                        </div>
+
+                        <!-- Email -->
+                        <div class="flex items-start">
+                            <div class="w-10 h-10 rounded-full bg-gray-800 flex items-center justify-center flex-shrink-0 text-gray-300 mr-4">
+                                <i class="fas fa-envelope"></i>
+                            </div>
+                            <div>
+                                <h4 class="text-sm font-medium text-gray-400">Email</h4>
+                                <p class="text-white">abyanthufail@gmail.com</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Contact Buttons -->
+                    <div class="flex flex-col space-y-4 justify-center">
+                        <!-- WhatsApp Button -->
+                        <a href="https://wa.me/6281230335939" target="_blank" class="flex items-center justify-center w-full bg-[#25D366] hover:bg-[#128C7E] text-white py-3 px-6 rounded-xl font-medium transition-all transform hover:-translate-y-1 shadow-lg shadow-green-900/50">
+                            <i class="fab fa-whatsapp text-xl mr-2"></i> WhatsApp Me
+                        </a>
+                        
+                        <!-- Instagram Button -->
+                        <a href="https://instagram.com/4abynn_" target="_blank" class="flex items-center justify-center w-full bg-gradient-to-r from-[#833ab4] via-[#fd1d1d] to-[#fcb045] hover:opacity-90 text-white py-3 px-6 rounded-xl font-medium transition-all transform hover:-translate-y-1 shadow-lg shadow-pink-900/50">
+                            <i class="fab fa-instagram text-xl mr-2"></i> @4abynn_
+                        </a>
+
+                        <!-- Email Button -->
+                        <a href="mailto:abyanthufail@gmail.com" class="flex items-center justify-center w-full bg-accent hover:bg-accentHover text-white py-3 px-6 rounded-xl font-medium transition-all transform hover:-translate-y-1 shadow-lg shadow-indigo-900/50">
+                            <i class="fas fa-paper-plane text-xl mr-2"></i> Kirim Email
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-[#020617] py-8 border-t border-white/5">
+        <div class="max-w-7xl mx-auto px-4 text-center">
+            <p class="text-gray-500 text-sm">
+                &copy; <script>document.write(new Date().getFullYear())</script> Muhammad abyan Thufail. All rights reserved. <br>
+                <span class="text-xs mt-2 inline-block">Designed & Built with <i class="fas fa-heart text-red-500 mx-1"></i></span>
+            </p>
+        </div>
+    </footer>
+
+    <!-- Scripts -->
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script>
+        // Inisialisasi AOS (Animate On Scroll)
+        AOS.init({
+            once: true, // Animasi hanya berjalan sekali saat di-scroll
+            offset: 100,
+            duration: 800,
+            easing: 'ease-out-cubic',
+        });
+
+        // Sticky Navbar Effect
+        const navbar = document.getElementById('navbar');
+        window.addEventListener('scroll', () => {
+            if (window.scrollY > 20) {
+                navbar.classList.add('shadow-lg', 'bg-darkBg/95');
+                navbar.classList.remove('bg-darkBg/80');
+            } else {
+                navbar.classList.remove('shadow-lg', 'bg-darkBg/95');
+                navbar.classList.add('bg-darkBg/80');
+            }
+        });
+
+        // Mobile Menu Toggle
+        const btn = document.getElementById('mobile-menu-btn');
+        const menu = document.getElementById('mobile-menu');
+        const mobileLinks = document.querySelectorAll('.mobile-link');
+
+        btn.addEventListener('click', () => {
+            menu.classList.toggle('hidden');
+        });
+
+        // Tutup menu mobile saat link diklik
+        mobileLinks.forEach(link => {
+            link.addEventListener('click', () => {
+                menu.classList.add('hidden');
+            });
+        });
+    </script>
+</body>
+</html>
